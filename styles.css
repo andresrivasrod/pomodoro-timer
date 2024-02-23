@@ -1,0 +1,32 @@
+body{
+    background-color: #5d1e7e;
+}
+
+.container{
+    display: block;
+    background-color: #ffff;
+    color: #000000;
+    border-radius: 20px;
+    margin: 30px;
+    padding: 10px;
+}
+
+.title{
+    text-align: center;
+}
+
+.parameters{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    text-align: center;
+    width: 110px;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #5d1e7e;
+    color:#ffffff;
+}
