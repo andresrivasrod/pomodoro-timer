@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const restMinutesInput = document.getElementById('rest-minutes');
     const startButton = document.getElementById('start');
     const timeValue = document.getElementById('time');
-    const resetButton = document.getElementById('reste');
+    const resetButton = document.getElementById('reset');
 
     let seconds = 0;
     let minutes = 0;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     startButton.addEventListener('click', function(event){
-        event.preventDefault(); 
+        event.preventDefault();
         if (intervalId) {
             clearInterval(intervalId);
         }
