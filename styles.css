@@ -1,5 +1,5 @@
 body{
-    background-color: #5d1e7e;
+    background-color: #efe528;
 }
 
 .container{
@@ -13,11 +13,14 @@ body{
 
 .title{
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
 }
 
-.parameters{
+#parameters{
     display: flex;
     justify-content: space-evenly;
+    margin: 10px;
 }
 
 button{
@@ -27,11 +30,28 @@ button{
     font-weight: bold;
     border-radius: 20px;
     padding: 10px;
-    background-color: #5d1e7e;
-    color:#ffffff;
+    background-color: #efe528;
+    color:#000000;
 }
 
 #time{
-    color: #5d1e7e;
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 80px;
+}
+
+
+#progress-bar{
+    display: flex;
+    padding: 18px;
+    border-radius: 20px;
+}
+
+.bar{
+    display: flex;
+    padding: 0px;
+    border-radius: 20px;
+    border-color: #000000;
+    border: 3px solid;
 }

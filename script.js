@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const parameters = document.getElementById('parameters');
     const workMinutesInput = document.getElementById('work-minutes');
     const restMinutesInput = document.getElementById('rest-minutes');
     const startButton = document.getElementById('start');
-    const timeValue = document.getElementById('time');
     const resetButton = document.getElementById('reset');
+    const timeValue = document.getElementById('time');
+    const progressBar = document.getElementById('progress-bar');
+    resetButton.style.display = 'none';
+   // const soundRest = document.getElementById('sound-rest');
+  //  const soundWork = document.getElementById('sound-work');
 
     let seconds = 0;
     let minutes = 0;
@@ -13,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resetButton.addEventListener('click', function(){
         window.location.href = 'index.html';
     });
+
 
     startButton.addEventListener('click', function(event){
         event.preventDefault();
@@ -27,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function startTimer() {
+        parameters.style.display ='none';
+        resetButton.style.display = 'initial';
         let totalMinutes = isWorking ? parseInt(workMinutesInput.value) : parseInt(restMinutesInput.value);
 
         seconds += 1;
@@ -39,12 +47,22 @@ document.addEventListener('DOMContentLoaded', function () {
             minutes = 0;
             seconds = 0;
             isWorking = !isWorking;
-        }
+
+            //if (isWorking) {
+            //    soundWork.play();
+            //} else {
+              //  soundRest.play();
+          //  }
+         }
 
         let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
         let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
         let status = isWorking ? 'Work' : 'Rest';
         
-        timeValue.innerHTML = `<span>${status} Time:</span> ${minutesValue}:${secondsValue}`;
+        timeValue.innerHTML = `<span style="color: ${isWorking ? 'red' : 'green'}">${status} Time: ${minutesValue}:${secondsValue}</span>`;
+
+        let progressPercentage = (minutes * 60 + seconds) / (totalMinutes * 60) * 98;
+        progressBar.style.width = progressPercentage + '%';
+        progressBar.style.backgroundColor = isWorking ? 'red' : 'green';
     }
 });
