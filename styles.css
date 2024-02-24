@@ -1,5 +1,5 @@
 body{
-    background-color: #efe528;
+    background-color: #ff9f29;
 }
 
 .container{
@@ -9,6 +9,7 @@ body{
     border-radius: 20px;
     margin: 30px;
     padding: 10px;
+    font-weight: bold;
 }
 
 .title{

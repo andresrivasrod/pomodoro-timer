@@ -14,11 +14,11 @@
         <form id="parameters">
             <div>
                 <label for="work-minutes">Minutes you want to work:</label>
-                <input type="number" id="work-minutes">
+                <input type="number" id="work-minutes" min="1" required>
             </div>
             <div>
                 <label for="rest-minutes">Minutes you want to rest:</label>
-                <input type="number" id="rest-minutes">
+                <input type="number" id="rest-minutes" min="1" required>
             </div>
             <button id="start">Start</button>
         </form>

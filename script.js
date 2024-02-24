@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (intervalId) {
             clearInterval(intervalId);
         }
+        if (workMinutesInput.value <= 0 || restMinutesInput.value <= 0) {
+            alert("Please enter a number greater than zero for the work and rest minutes.");
+            return;
+        }
         seconds = 0;
         minutes = 0;
         isWorking = true;
